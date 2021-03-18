@@ -276,7 +276,7 @@ export class RemoteSocket<EmitEvents extends EventsMap>
   public emit<Ev extends EventNames<EmitEvents>>(
     ev: Ev,
     ...args: EventParams<EmitEvents, Ev>
-  ): true {
+  ): boolean {
     return this.operator.emit(ev, ...args);
   }
 
